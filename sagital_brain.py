@@ -16,7 +16,7 @@ def run_averages(file_input='brain_sample_2.csv', file_output='brain_average_2.c
 
     # Calculates the averages through the sagital/horizontal planes
     # and makes it as a row vector
-    averages = planes.mean(axis=0)[np.newaxis, :]
+    averages = planes.mean(axis=1)[np.newaxis, :]
 
     # write it out on my file
     np.savetxt(file_output, averages, fmt='%.1f', delimiter=',')
